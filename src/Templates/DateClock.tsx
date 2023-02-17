@@ -1,26 +1,30 @@
-import { useEffect ,useState } from "react";
 import Dates from "../Parts/Dates";
 import Clock from "../Parts/Clock";
 
-const DataClock = () => {
-    const [dates, setDates] = useState(new Date());
-    const year:number = dates.getFullYear();
-    const month:number = dates.getMonth();
-    const date:number = dates.getDate();
-    const day: number = dates.getDay();
+type Props = {
+    year: number,
+    month: number,
+    date: number,
+    day: number,
+    hour: number,
+    minute: number,
+    second: number
+}
+
+const DataClock = (props:Props) => {
+    //対応する曜日を当てる
     const weekday: string[] = ["日", "月", "火", "水", "木", "金", "土"];
-    const hour: number = dates.getHours();
-    const minute: number = dates.getMinutes();
-    const second: number = dates.getSeconds();
-    setInterval(() => {
-        setDates(new Date());
-    }, 1000);
+    //1桁数字を2桁にする
+    const digits2 = (number: number): string => {
+        return ("0" + number).slice(-2);
+    }
+
     return (
         <div className="data-clock-container">
-            <Dates year={year} month={month} date={date} day={weekday[day]} />
-            <Clock hour={hour} minute={minute} second={second} />
+            <Dates year={String(props.year)} month={digits2(props.month)} date={digits2(props.date)} day={weekday[props.day]} />
+            <Clock hour={digits2(props.hour)} minute={digits2(props.minute)} second={digits2(props.second)} />
         </div>
-        )
+    );
 }
 
 export default DataClock;
