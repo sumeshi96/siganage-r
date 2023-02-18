@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Graduate&family=Kosugi+Maru&display=swap');
+
+.date{
+    text-align: center;
+    margin:0;
+    font-size:50px;
+    font-family: 'Graduate', cursive;
+}

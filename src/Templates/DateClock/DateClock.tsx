@@ -1,11 +1,12 @@
-import Dates from "../Parts/Dates";
-import Clock from "../Parts/Clock";
-
+import Dates from "../../Parts/Dates/Dates";
+import Clock from "../../Parts/Clock/Clock";
+import styles from "./DateClock.module.css";
 type Props = {
     year: number,
     month: number,
     date: number,
     day: number,
+    isToday:string,
     hour: number,
     minute: number,
     second: number
@@ -20,8 +21,8 @@ const DataClock = (props:Props) => {
     }
 
     return (
-        <div className="data-clock-container">
-            <Dates year={String(props.year)} month={digits2(props.month)} date={digits2(props.date)} day={weekday[props.day]} />
+        <div className={styles.box}>
+            <Dates year={String(props.year)} month={digits2(props.month)} date={digits2(props.date)} day={weekday[props.day]} isToday={ props.isToday} />
             <Clock hour={digits2(props.hour)} minute={digits2(props.minute)} second={digits2(props.second)} />
         </div>
     );

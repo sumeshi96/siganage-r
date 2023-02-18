@@ -1,0 +1,37 @@
+.box{
+    width:50%;
+    margin-left:5%;
+}
+
+.size{
+    font-size:35px;
+}
+
+.highTemp{
+    font-size:20px;
+    color:#FF0000;
+}
+.highTempDiff{
+    font-size:15px;
+}
+
+.highBox{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.lowTemp{
+    font-size:20px;
+    color:#0096FF;
+}
+
+.lowTempDiff{
+    font-size:15px;
+}
+
+.lowBox{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}

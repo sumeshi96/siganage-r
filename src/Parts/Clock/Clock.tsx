@@ -1,3 +1,5 @@
+import styles from "./Clock.module.css"
+
 type Props = {
     hour: string,
     minute: string,
@@ -6,7 +8,7 @@ type Props = {
 
 const Dates = (props: Props) => {
     return (
-        <p>{props.hour}:{props.minute}:{props.second}</p>
+        <p className={styles.clock}>{props.hour}:{props.minute}:{props.second}</p>
     );
 }
 

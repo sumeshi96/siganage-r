@@ -1,0 +1,16 @@
+.forecast{
+    
+    width:40%;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:5%;
+    border-radius: 25px;
+    box-shadow:  10px 10px 30px #bebebe,-10px -10px 30px #ffffff;
+}
+
+.imgTemp{
+    display:flex;
+    justify-content: space-between;
+    width:90%;
+    margin:auto;
+}
