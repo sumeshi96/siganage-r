@@ -39,7 +39,7 @@ export async function getWeather(whenDate:string) {
             "eighteenTwentyFour": eighteenTwentyFour
         }
     } catch (error) {
-        //console.error(error);
+        console.error(error);
     }
 }
 /*
