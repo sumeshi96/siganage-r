@@ -2,10 +2,14 @@ import * as functions from "firebase-functions";
 import express from "express";
 import request from "request";
 import { JSDOM } from "jsdom";
+import cors from "cors";
 
 const app: express.Express = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// CORSの許可
+app.use(cors());
 
 //getWether Moduleから天気データを取得する。
 

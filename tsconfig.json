@@ -18,7 +18,16 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types" // 任意の場所
+    ],
+    "types": [
+      "react",
+      "react-dom",
+      // 他の必要な型
+    ]
   },
   "include": [
     "src"

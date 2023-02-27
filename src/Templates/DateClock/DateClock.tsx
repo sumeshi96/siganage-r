@@ -15,6 +15,7 @@ type Props = {
 const DataClock = (props:Props) => {
     //対応する曜日を当てる
     const weekday: string[] = ["日", "月", "火", "水", "木", "金", "土"];
+    const year: number[] = [1,2,3,4,5,6,7,8,9,10,11,12];
     //1桁数字を2桁にする
     const digits2 = (number: number): string => {
         return ("0" + number).slice(-2);
@@ -22,7 +23,7 @@ const DataClock = (props:Props) => {
 
     return (
         <div className={styles.box}>
-            <Dates year={String(props.year)} month={digits2(props.month)} date={digits2(props.date)} day={weekday[props.day]} isToday={ props.isToday} />
+            <Dates year={String(props.year)} month={digits2(year[props.month])} date={digits2(props.date)} day={weekday[props.day]} isToday={ props.isToday} />
             <Clock hour={digits2(props.hour)} minute={digits2(props.minute)} second={digits2(props.second)} />
         </div>
     );
